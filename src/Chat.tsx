@@ -30,9 +30,6 @@ export interface ChatProps {
 }
 
 export const sendMessage = (text: string, from: User, locale: string, title?:string) => {
-  console.log('title in chat');
-  console.log(title);
-
   return ({
       type: 'Send_Message',
       activity: {
