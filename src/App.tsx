@@ -6,10 +6,13 @@ export type AppProps = ChatProps;
 
 export const App = (props: AppProps, container: HTMLElement) => {
     konsole.log("BotChat.App props", props);
-    ReactDOM.render(React.createElement(AppContainer, props), container);
-} 
+    let chat = React.createElement(AppContainer, props);
+    ReactDOM.render(chat, container);
 
-const AppContainer = (props: AppProps) =>
+    return chat;
+}
+
+const AppContainer = (props:ChatProps) =>
     <div className="wc-app">
-        <Chat { ...props } />
+        <Chat { ... props} />
     </div>;

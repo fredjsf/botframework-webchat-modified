@@ -6,7 +6,9 @@ var ReactDOM = require("react-dom");
 var Chat_1 = require("./Chat");
 exports.App = function (props, container) {
     Chat_1.konsole.log("BotChat.App props", props);
-    ReactDOM.render(React.createElement(AppContainer, props), container);
+    var chat = React.createElement(AppContainer, props);
+    ReactDOM.render(chat, container);
+    return chat;
 };
 var AppContainer = function (props) {
     return React.createElement("div", { className: "wc-app" },

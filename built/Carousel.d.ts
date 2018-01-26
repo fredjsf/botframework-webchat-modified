@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import * as React from 'react';
 import { Attachment } from 'botframework-directlinejs-modified';
 import { FormatState, SizeState } from './Store';
@@ -16,7 +17,7 @@ export declare class Carousel extends React.PureComponent<CarouselProps, {}> {
     private updateContentWidth();
     componentDidMount(): void;
     componentDidUpdate(): void;
-    render(): any;
+    render(): JSX.Element;
 }
 export interface CarouselAttachmentProps {
     format: FormatState;

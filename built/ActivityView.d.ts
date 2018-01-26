@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import * as React from 'react';
 import { FormatState, SizeState } from './Store';
 import { IDoCardAction } from './Chat';
@@ -11,5 +12,5 @@ export interface ActivityViewProps {
 export declare class ActivityView extends React.Component<ActivityViewProps, {}> {
     constructor(props: ActivityViewProps);
     shouldComponentUpdate(nextProps: ActivityViewProps): boolean;
-    render(): any;
+    render(): JSX.Element;
 }

@@ -85,6 +85,13 @@ export class Chat extends React.Component<ChatProps, {}> {
             this.store.dispatch<ChatActions>({ type: 'Set_Send_Typing', sendTyping: props.sendTyping });
     }
 
+    public updateUser(user:User){
+      this.store.dispatch<ChatActions>({
+        type:'Update_User',
+        user:user
+      });
+    }
+
     private handleIncomingActivity(activity: Activity) {
         let state = this.store.getState();
         switch (activity.type) {

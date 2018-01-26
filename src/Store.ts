@@ -140,6 +140,31 @@ export const size: Reducer<SizeState> = (
     }
 }
 
+export interface UserState {
+  user:User
+}
+
+export type UpdateUser = {
+  type:'Update_User',
+  user:User
+}
+
+export const user:Reducer<UserState> = (
+  state:UserState = {
+    user:undefined
+  },
+  action:UpdateUser
+) => {
+  switch(action.type){
+    case 'Update_User':
+      return{
+        ... state,
+        user:action.user
+      };
+    default:
+      return state;
+  }
+}
 
 export interface ConnectionState {
     connectionStatus: ConnectionStatus,
@@ -159,6 +184,7 @@ export type ConnectionAction = {
     type: 'Connection_Change',
     connectionStatus: ConnectionStatus
 }
+
 
 export const connection: Reducer<ConnectionState> = (
     state: ConnectionState = {
@@ -357,7 +383,7 @@ export const history: Reducer<HistoryState> = (
     }
 }
 
-export type ChatActions = ShellAction | FormatAction | SizeAction | ConnectionAction | HistoryAction;
+export type ChatActions = ShellAction | FormatAction | SizeAction | ConnectionAction | HistoryAction | UpdateUser;
 
 const nullAction = { type: null } as ChatActions;
 

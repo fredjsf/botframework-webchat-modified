@@ -1,3 +1,5 @@
+/// <reference types="react" />
+import { Attachment } from 'botframework-directlinejs-modified';
 import { IDoCardAction } from './Chat';
 import { FormatState } from './Store';
 export interface QueryParams {
@@ -6,7 +8,7 @@ export interface QueryParams {
 export declare const queryParams: (src: string) => QueryParams;
 export declare const AttachmentView: (props: {
     format: FormatState;
-    attachment: any;
+    attachment: Attachment;
     onCardAction: IDoCardAction;
     onImageLoad: () => void;
-}) => any;
+}) => JSX.Element;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import * as React from 'react';
 import { Activity } from 'botframework-directlinejs-modified';
 import { FormatState, SizeState } from './Store';
@@ -33,9 +34,9 @@ export declare class HistoryView extends React.Component<HistoryProps, {}> {
     private autoscroll();
     private measurableCarousel;
     private doCardAction(type, value, title, index);
-    render(): any;
+    render(): JSX.Element;
 }
-export declare const History: any;
+export declare const History: React.ComponentClass<any>;
 export interface WrappedActivityProps {
     activity: Activity;
     showTimestamp: boolean;
@@ -48,5 +49,5 @@ export interface WrappedActivityProps {
 export declare class WrappedActivity extends React.Component<WrappedActivityProps, {}> {
     messageDiv: HTMLDivElement;
     constructor(props: WrappedActivityProps);
-    render(): any;
+    render(): JSX.Element;
 }

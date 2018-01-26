@@ -50,6 +50,14 @@ export declare type SizeAction = {
     height: number;
 };
 export declare const size: Reducer<SizeState>;
+export interface UserState {
+    user: User;
+}
+export declare type UpdateUser = {
+    type: 'Update_User';
+    user: User;
+};
+export declare const user: Reducer<UserState>;
 export interface ConnectionState {
     connectionStatus: ConnectionStatus;
     botConnection: IBotConnection;
@@ -95,7 +103,7 @@ export declare type HistoryAction = {
     id: string;
 };
 export declare const history: Reducer<HistoryState>;
-export declare type ChatActions = ShellAction | FormatAction | SizeAction | ConnectionAction | HistoryAction;
+export declare type ChatActions = ShellAction | FormatAction | SizeAction | ConnectionAction | HistoryAction | UpdateUser;
 export interface ChatState {
     shell: ShellState;
     format: FormatState;
@@ -113,5 +121,5 @@ import 'rxjs/add/operator/throttleTime';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/of';
 import { Store } from 'redux';
-export declare const createStore: () => any;
+export declare const createStore: () => Store<ChatState>;
 export declare type ChatStore = Store<ChatState>;

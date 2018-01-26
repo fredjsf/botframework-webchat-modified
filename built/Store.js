@@ -52,6 +52,17 @@ exports.size = function (state, action) {
             return state;
     }
 };
+exports.user = function (state, action) {
+    if (state === void 0) { state = {
+        user: undefined
+    }; }
+    switch (action.type) {
+        case 'Update_User':
+            return tslib_1.__assign({}, state, { user: action.user });
+        default:
+            return state;
+    }
+};
 exports.connection = function (state, action) {
     if (state === void 0) { state = {
         connectionStatus: botframework_directlinejs_modified_1.ConnectionStatus.Uninitialized,

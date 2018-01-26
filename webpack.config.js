@@ -6,7 +6,7 @@ module.exports = {
     output: {
         libraryTarget: "umd",
         library: "BotChat",
-        filename: "./botchat.js",
+        filename: "./botchat_modified.js",
     },
 
     devtool: "source-map",

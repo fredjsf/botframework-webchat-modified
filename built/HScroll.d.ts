@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import * as React from 'react';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/observable/merge';
@@ -24,5 +25,5 @@ export declare class HScroll extends React.Component<HScrollProps, {}> {
     componentWillUnmount(): void;
     private scrollAmount(direction);
     private scrollBy(direction);
-    render(): any;
+    render(): JSX.Element;
 }

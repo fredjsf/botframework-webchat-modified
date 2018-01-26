@@ -48,6 +48,12 @@ var Chat = /** @class */ (function (_super) {
             _this.store.dispatch({ type: 'Set_Send_Typing', sendTyping: props.sendTyping });
         return _this;
     }
+    Chat.prototype.updateUser = function (user) {
+        this.store.dispatch({
+            type: 'Update_User',
+            user: user
+        });
+    };
     Chat.prototype.handleIncomingActivity = function (activity) {
         var state = this.store.getState();
         switch (activity.type) {
