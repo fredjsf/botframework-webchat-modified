@@ -1,6 +1,6 @@
 {
   "name": "botframework-webchat-modified",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Custom version of botframework-webchat",
   "main": "built/BotChat.js",
   "types": "built/BotChat.d.ts",
