@@ -62,10 +62,6 @@ export class ActivityView extends React.Component<ActivityViewProps, {}> {
         const { activity, ... otherProps } = this.props;
         switch (activity.type) {
             case 'message':
-              if(activity.title){
-                console.log('activity.title = ' + activity.title);
-              }
-
                 return (
                     <div>
                         <FormattedText

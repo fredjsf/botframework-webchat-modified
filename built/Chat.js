@@ -31,7 +31,7 @@ exports.sendFiles = function (files, from, locale) { return ({
 var History_1 = require("./History");
 var MessagePane_1 = require("./MessagePane");
 var Shell_1 = require("./Shell");
-var Chat = /** @class */ (function (_super) {
+var Chat = (function (_super) {
     tslib_1.__extends(Chat, _super);
     function Chat(props) {
         var _this = _super.call(this, props) || this;

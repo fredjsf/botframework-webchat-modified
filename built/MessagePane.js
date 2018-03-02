@@ -11,7 +11,7 @@ var MessagePaneView = function (props) {
         React.createElement("div", { className: "wc-suggested-actions" },
             React.createElement(SuggestedActions, tslib_1.__assign({}, props))));
 };
-var SuggestedActions = /** @class */ (function (_super) {
+var SuggestedActions = (function (_super) {
     tslib_1.__extends(SuggestedActions, _super);
     function SuggestedActions(props) {
         return _super.call(this, props) || this;

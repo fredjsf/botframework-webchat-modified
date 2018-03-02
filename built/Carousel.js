@@ -5,7 +5,7 @@ var React = require("react");
 var Attachment_1 = require("./Attachment");
 var HScroll_1 = require("./HScroll");
 var Chat_1 = require("./Chat");
-var Carousel = /** @class */ (function (_super) {
+var Carousel = (function (_super) {
     tslib_1.__extends(Carousel, _super);
     function Carousel(props) {
         return _super.call(this, props) || this;
@@ -38,7 +38,7 @@ var Carousel = /** @class */ (function (_super) {
     return Carousel;
 }(React.PureComponent));
 exports.Carousel = Carousel;
-var CarouselAttachments = /** @class */ (function (_super) {
+var CarouselAttachments = (function (_super) {
     tslib_1.__extends(CarouselAttachments, _super);
     function CarouselAttachments() {
         return _super !== null && _super.apply(this, arguments) || this;

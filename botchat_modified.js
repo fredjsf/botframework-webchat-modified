@@ -3477,6 +3477,12 @@ var Chat = (function (_super) {
             _this.store.dispatch({ type: 'Set_Send_Typing', sendTyping: props.sendTyping });
         return _this;
     }
+    Chat.prototype.updateUser = function (user) {
+        this.store.dispatch({
+            type: 'Update_User',
+            user: user
+        });
+    };
     Chat.prototype.handleIncomingActivity = function (activity) {
         var state = this.store.getState();
         switch (activity.type) {
@@ -17754,7 +17760,9 @@ var ReactDOM = __webpack_require__(366);
 var Chat_1 = __webpack_require__(21);
 exports.App = function (props, container) {
     Chat_1.konsole.log("BotChat.App props", props);
-    ReactDOM.render(React.createElement(AppContainer, props), container);
+    var chat = React.createElement(AppContainer, props);
+    ReactDOM.render(chat, container);
+    return chat;
 };
 var AppContainer = function (props) {
     return React.createElement("div", { className: "wc-app" },
@@ -17866,9 +17874,6 @@ var ActivityView = (function (_super) {
         var _a = this.props, activity = _a.activity, otherProps = tslib_1.__rest(_a, ["activity"]);
         switch (activity.type) {
             case 'message':
-                if (activity.title) {
-                    console.log('activity.title = ' + activity.title);
-                }
                 return (React.createElement("div", null,
                     React.createElement(FormattedText_1.FormattedText, { text: activity.title || activity.text, format: activity.textFormat, onImageLoad: otherProps.onImageLoad }),
                     React.createElement(Attachments, tslib_1.__assign({ attachments: activity.attachments, attachmentLayout: activity.attachmentLayout }, otherProps))));
@@ -18452,6 +18457,17 @@ exports.size = function (state, action) {
     switch (action.type) {
         case 'Set_Size':
             return tslib_1.__assign({}, state, { width: action.width, height: action.height });
+        default:
+            return state;
+    }
+};
+exports.user = function (state, action) {
+    if (state === void 0) { state = {
+        user: undefined
+    }; }
+    switch (action.type) {
+        case 'Update_User':
+            return tslib_1.__assign({}, state, { user: action.user });
         default:
             return state;
     }

@@ -16,7 +16,7 @@ var Attachments = function (props) {
                 return React.createElement(Attachment_1.AttachmentView, tslib_1.__assign({ key: index, attachment: attachment }, otherProps));
             }));
 };
-var ActivityView = /** @class */ (function (_super) {
+var ActivityView = (function (_super) {
     tslib_1.__extends(ActivityView, _super);
     function ActivityView(props) {
         return _super.call(this, props) || this;
@@ -24,9 +24,7 @@ var ActivityView = /** @class */ (function (_super) {
     ActivityView.prototype.shouldComponentUpdate = function (nextProps) {
         // if the activity changed, re-render
         return this.props.activity !== nextProps.activity
-            // if the format changed, re-render
             || this.props.format !== nextProps.format
-            // if it's a carousel and the size changed, re-render
             || (this.props.activity.type === 'message'
                 && this.props.activity.attachmentLayout === 'carousel'
                 && this.props.size !== nextProps.size);
@@ -35,9 +33,6 @@ var ActivityView = /** @class */ (function (_super) {
         var _a = this.props, activity = _a.activity, otherProps = tslib_1.__rest(_a, ["activity"]);
         switch (activity.type) {
             case 'message':
-                if (activity.title) {
-                    console.log('activity.title = ' + activity.title);
-                }
                 return (React.createElement("div", null,
                     React.createElement(FormattedText_1.FormattedText, { text: activity.title || activity.text, format: activity.textFormat, onImageLoad: otherProps.onImageLoad }),
                     React.createElement(Attachments, tslib_1.__assign({ attachments: activity.attachments, attachmentLayout: activity.attachmentLayout }, otherProps))));
