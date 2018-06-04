@@ -132,7 +132,7 @@ export class HistoryView extends React.Component<HistoryProps, {}> {
 
     render() {
         konsole.log("History props", this);
-        let content;
+        let content:any;
         if (this.props.size.width !== undefined) {
             if (this.props.format.carouselMargin === undefined) {
                 // For measuring carousels we need a width known to be larger than the chat itself

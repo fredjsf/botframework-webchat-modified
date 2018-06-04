@@ -3487,8 +3487,9 @@ var Chat = (function (_super) {
         var state = this.store.getState();
         switch (activity.type) {
             case "message":
+                var casted = tslib_1.__assign({}, activity);
                 //skip showing the message on client
-                if (!!activity.name && activity.name == 'skipOnClient') {
+                if (!!casted.name && casted.name == 'skipOnClient') {
                     break;
                 }
                 this.store.dispatch({ type: activity.from.id === state.connection.user.id ? 'Receive_Sent_Message' : 'Receive_Message', activity: activity });
