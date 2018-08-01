@@ -432,7 +432,22 @@ const trySendMessage: Epic<ChatActions, ChatState> = (action$, store) =>
             return Observable.empty<HistoryAction>();
         }
 
-        return state.connection.botConnection.postActivity(activity)
+        let sliced:any = { ...activity };
+        // force to add the location as properties in "data" prop
+        if('data' in sliced){
+            sliced['data'] = { 
+                ...sliced['data'],
+                initialLink:location.href,
+                initialTitle:document.title
+            };
+        }else{
+            sliced['data'] ={
+                initialLink:location.href,
+                initialTitle:document.title
+            }; 
+        }
+
+        return state.connection.botConnection.postActivity(sliced as Activity)
         .map(id => ({ type: 'Send_Message_Succeed', clientActivityId, id } as HistoryAction))
         .catch(error => Observable.of({ type: 'Send_Message_Fail', clientActivityId } as HistoryAction))
     });

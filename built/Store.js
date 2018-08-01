@@ -188,7 +188,18 @@ var trySendMessage = function (action$, store) {
             Chat_1.konsole.log("trySendMessage: activity not found");
             return Observable_1.Observable.empty();
         }
-        return state.connection.botConnection.postActivity(activity)
+        var sliced = tslib_1.__assign({}, activity);
+        // force to add the location as properties in "data" prop
+        if ('data' in sliced) {
+            sliced['data'] = tslib_1.__assign({}, sliced['data'], { initialLink: location.href, initialTitle: document.title });
+        }
+        else {
+            sliced['data'] = {
+                initialLink: location.href,
+                initialTitle: document.title
+            };
+        }
+        return state.connection.botConnection.postActivity(sliced)
             .map(function (id) { return ({ type: 'Send_Message_Succeed', clientActivityId: clientActivityId, id: id }); })
             .catch(function (error) { return Observable_1.Observable.of({ type: 'Send_Message_Fail', clientActivityId: clientActivityId }); });
     });
