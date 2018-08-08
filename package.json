@@ -31,7 +31,7 @@
   "dependencies": {
     "@types/react": "^15.0.21",
     "botframework-directlinejs-modified": "^0.2.1",
-    "core-js": "^2.4.1",
+    "core-js": "^2.5.7",
     "markdown-it": "^8.3.1",
     "microsoft-adaptivecards": "^0.6.0",
     "react": "^15.4.2",
@@ -39,8 +39,8 @@
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "redux-observable": "^0.13.0",
-    "rxjs": "^5.3.0",
-    "tslib": "^1.6.0"
+    "rxjs": "^6.2.2",
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.33",
@@ -52,27 +52,27 @@
     "@types/nightmare": "^1.6.30",
     "@types/react-dom": "^0.14.23",
     "@types/react-redux": "^4.4.38",
-    "awesome-typescript-loader": "^3.1.2",
+    "awesome-typescript-loader": "^5.2.0",
     "body-parser": "^1.16.0",
     "chai": "^3.5.0",
     "chai-subset": "^1.4.0",
-    "concurrently": "^3.1.0",
+    "concurrently": "^3.6.1",
     "deep-freeze": "0.0.1",
     "dotenv": "^4.0.0",
-    "expose-loader": "^0.7.3",
-    "express": "^4.14.0",
-    "fs-extra": "^1.0.0",
-    "http-server": "^0.9.0",
+    "expose-loader": "^0.7.5",
+    "express": "^4.16.3",
+    "fs-extra": "^7.0.0",
+    "http-server": "^0.11.1",
     "microsoft-adaptivecards-scss-to-json": "^1.2.0",
     "mocha": "^5.2.0",
     "nightmare": "^3.0.1",
-    "node-sass": "^4.5.0",
+    "node-sass": "^4.9.2",
     "nodemon": "^1.18.3",
     "npm-run-all": "^3.1.2",
     "remote": "^0.2.6",
-    "source-map-loader": "^0.2.1",
+    "source-map-loader": "^0.2.3",
     "typescript": "^3.0.1",
     "vo": "^4.0.2",
-    "webpack": "^2.7.0"
+    "webpack": "^4.16.5"
   }
 }
