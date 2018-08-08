@@ -4,7 +4,7 @@ var tslib_1 = require("tslib");
 var React = require("react");
 var Chat_1 = require("./Chat");
 var react_redux_1 = require("react-redux");
-var ShellContainer = (function (_super) {
+var ShellContainer = /** @class */ (function (_super) {
     tslib_1.__extends(ShellContainer, _super);
     function ShellContainer(props) {
         return _super.call(this, props) || this;

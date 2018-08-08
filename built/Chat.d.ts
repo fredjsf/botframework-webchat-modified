@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import * as React from 'react';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Activity, IBotConnection, User, DirectLineOptions, CardActionTypes } from 'botframework-directlinejs-modified';
@@ -33,11 +32,11 @@ export declare class Chat extends React.Component<ChatProps, {}> {
     private resizeListener;
     constructor(props: ChatProps);
     updateUser(user: User): void;
-    private handleIncomingActivity(activity);
-    private setSize();
+    private handleIncomingActivity;
+    private setSize;
     componentDidMount(): void;
     componentWillUnmount(): void;
-    private setFocus();
+    private setFocus;
     render(): JSX.Element;
 }
 export interface IDoCardAction {

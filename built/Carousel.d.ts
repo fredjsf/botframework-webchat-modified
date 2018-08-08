@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import * as React from 'react';
 import { Attachment } from 'botframework-directlinejs-modified';
 import { FormatState, SizeState } from './Store';
@@ -14,7 +13,7 @@ export declare class Carousel extends React.PureComponent<CarouselProps, {}> {
     private root;
     private hscroll;
     constructor(props: CarouselProps);
-    private updateContentWidth();
+    private updateContentWidth;
     componentDidMount(): void;
     componentDidUpdate(): void;
     render(): JSX.Element;

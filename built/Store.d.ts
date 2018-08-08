@@ -3,7 +3,7 @@ import { FormatOptions, ActivityOrID } from './Chat';
 import { Strings } from './Strings';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Reducer } from 'redux';
-declare global  {
+declare global {
     interface Window {
         typingBubbleTimeout: any;
     }

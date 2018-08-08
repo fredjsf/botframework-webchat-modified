@@ -5,7 +5,7 @@ var React = require("react");
 var react_redux_1 = require("react-redux");
 var ActivityView_1 = require("./ActivityView");
 var Chat_1 = require("./Chat");
-var HistoryView = (function (_super) {
+var HistoryView = /** @class */ (function (_super) {
     tslib_1.__extends(HistoryView, _super);
     function HistoryView(props) {
         var _this = _super.call(this, props) || this;
@@ -167,7 +167,7 @@ var measurePaddedWidth = function (el) {
 var suitableInterval = function (current, next) {
     return Date.parse(next.timestamp) - Date.parse(current.timestamp) > 5 * 60 * 1000;
 };
-var WrappedActivity = (function (_super) {
+var WrappedActivity = /** @class */ (function (_super) {
     tslib_1.__extends(WrappedActivity, _super);
     function WrappedActivity(props) {
         return _super.call(this, props) || this;

@@ -1,9 +1,8 @@
-/// <reference types="react" />
 import * as React from 'react';
 import { Activity } from 'botframework-directlinejs-modified';
 import { FormatState, SizeState } from './Store';
 import { IDoCardAction } from './Chat';
-declare global  {
+declare global {
     interface Window {
         enableOldButtons: boolean;
         lastIndexDisableButtons: number;
@@ -31,9 +30,9 @@ export declare class HistoryView extends React.Component<HistoryProps, {}> {
     constructor(props: HistoryProps);
     componentWillUpdate(): void;
     componentDidUpdate(): void;
-    private autoscroll();
+    private autoscroll;
     private measurableCarousel;
-    private doCardAction(type, value, title, index);
+    private doCardAction;
     render(): JSX.Element;
 }
 export declare const History: React.ComponentClass<any>;
